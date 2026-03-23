@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원 가입</title>
+    <style>
+      #container {
+        width: 600px;
+        margin: 10px auto;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="css/register.css" /> -->
+  </head>
+  <body>
+    <div id="container">
+      <h1>회원 가입을 환영합니다</h1>
+      <form>
+        <div id="buttons">
+          <!-- 가입하기, 취소 버튼 작성 -->
+          <fieldset>
+            <legend>사용자 정보</legend>
+            <ul>
+              <label for="user_id"><b>아이디</b></label>
+              <input type="text" id="user_id" autofocus required /><br />
+              <label for="user_email"><b>이메일</b></label>
+              <input type="email" id="user_email" required /><br />
+              <label for="user_pasw"><b>비밀번호</b></label>
+              <input type="password" id="user_pasw" required /><br />
+              <label for="user_pasw_resign"><b>비밀번호 확인</b></label>
+              <input type="password" id="user_pasw_resign" required /><br />
+              <label for="income_how"><b>가입 경로</b></label>
+              <select id="income_how">
+                <option value="blog">블로그</option>
+                <option value="cafe">카페</option>
+                <option value="news">기사</option>
+                <option value="people">지인추천</option>
+                <option value="search">검색</option></select
+              ><br />
+              <label for="memo"><b>메모</b></label>
+              <textarea id="memo" cols="40" rows="4"></textarea>
+            </ul>
+            <fieldset>
+              <legend>이벤트와 새로운 소식</legend>
+              <input type="radio" name="agreement" value="yes" />메일 수신
+              <input type="radio" name="agreement" value="no" />메일 수신 안함
+            </fieldset>
+          </fieldset>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
