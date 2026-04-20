@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>개인 정보 입력</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <fieldset>
+      <legend>기본 정보</legend>
+      <b>이름</b><input type="text" id="user_name" autofocus required /><br />
+      <b>성별</b><input type="radio" name="sex" value="male" />남자
+      <input type="radio" name="sex" value="female" />여자 <br />
+      <b>이메일</b><input type="email" id="user_email" required /> <br />
+      <b>비밀번호</b><input type="password" id="user_pwd" required />
+    </fieldset>
+    <fieldset>
+      <legend>상세 정보</legend>
+      <b>좋아하는 음식</b>
+      <select>
+        <option value="김밥">김밥</option>
+        <option value="떡볶이">떡볶이</option>
+        <option value="순대">순대</option>
+        <option value="어묵">어묵</option></select
+      ><br />
+      <b>관심 분야</b>
+      <input type="checkbox" id="interest" />보안
+      <input type="checkbox" id="interest" />인공지능
+      <input type="checkbox" id="interest" />네트워크 <br />
+      <b>선택 과목</b>
+      <select>
+        <optgroup label="실습과목">
+          <option value="HTML5/CSS">HTML5/CSS</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="C언어">C언어</option>
+        </optgroup>
+        <optgroup label="이론과목">
+          <option value="멀티미디어개론">멀티미디어개론</option>
+          <option value="컴퓨터개론">컴퓨터개론</option>
+        </optgroup>
+      </select>
+    </fieldset>
+    <br />
+    <input type="submit" value="정보 제출하기" />
+    <input type="reset" value="다시 작성" />
+  </body>
+</html>
