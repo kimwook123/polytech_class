@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3번</title>
+  </head>
+  <body>
+    <script>
+      let score = prompt("학생의 점수는?");
+
+      function getGrade(score) {
+        let num = Math.floor(parseInt(score) / 10);
+        switch (num) {
+          case 10:
+          case 9:
+            return "A";
+          case 8:
+            return "B";
+          default:
+            return "C";
+        }
+      }
+
+      alert(`학생의 학점은 ${getGrade(score)}입니다.`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>4번</title>
+  </head>
+  <body>
+    <script>
+      var total = 100;
+      function discount() {
+        var total = 50;
+        console.log("함수 내부 total:", total);
+      }
+      discount();
+      console.log("함수 외부 total:", total);
+    </script>
+  </body>
+</html>
+// 지역변수는 지역을 벗어나면 사라진다. total은 전역변수로 먼저 선언되어, //
+discount가 지역변수 total을 리턴하지 않는다면 total은 100으로 출력된다.

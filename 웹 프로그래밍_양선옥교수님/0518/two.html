@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2번</title>
+  </head>
+  <body>
+    <script>
+      let diameter = prompt("원의 반지름을 입력하세요.");
+
+      function calcCircleArea(radius) {
+        if (radius !== null) {
+          let area = Math.PI * Math.pow(parseFloat(radius), 2);
+          return area;
+        }
+        return 0;
+      }
+      let circleArea = calcCircleArea(diameter);
+
+      document.write(`원의 넓이는 ${circleArea}입니다.`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5번</title>
+  </head>
+  <body>
+    <script>
+      let total = 100;
+      function discount() {
+        total = 50;
+        console.log("함수 내부 total:", total);
+      }
+      discount();
+      console.log("함수 외부 total:", total);
+    </script>
+  </body>
+</html>
