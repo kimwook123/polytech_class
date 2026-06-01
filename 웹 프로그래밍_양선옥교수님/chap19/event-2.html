@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM event 객체</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/kitty-1.png" id="cat" />
+    </div>
+
+    <script>
+      // Do it! DOM을 사용해 이벤트 처리하기
+      const cat = document.querySelector("#cat"); // 클릭하면 경고창 표시
+      cat.addEventListener(
+        "click",
+        function () {
+          alert("야옹");
+        },
+        false,
+      ); //마우스 올리면 이미지 변경
+      cat.addEventListener(
+        "mouseover",
+        function () {
+          cat.src = "images/kitty-2.png";
+        },
+        false,
+      ); // 마우스 벗어나면 원래 이미지로
+      cat.addEventListener(
+        "mouseout",
+        function () {
+          cat.src = "images/kitty-1.png";
+        },
+        false,
+      );
+    </script>
+  </body>
+</html>
