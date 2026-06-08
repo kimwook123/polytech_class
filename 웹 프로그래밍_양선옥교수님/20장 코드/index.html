@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품 목록 관리</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 20px;
+        background-color: #f5f5f5;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #333;
+      }
+      .section {
+        margin: 20px 0;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fafafa;
+      }
+      .section h2 {
+        color: #0066cc;
+        font-size: 18px;
+        margin-top: 0;
+      }
+      .result {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: white;
+        border-left: 4px solid #0066cc;
+      }
+      .result pre {
+        margin: 0;
+        overflow-x: auto;
+      }
+      button {
+        padding: 8px 16px;
+        margin: 5px;
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      button:hover {
+        background-color: #0052a3;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+      }
+      table th,
+      table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      table th {
+        background-color: #0066cc;
+        color: white;
+      }
+      table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>스스로 해보기 - 상품 목록 관리</h1>
+
+      <!-- 1. id가 2인 상품 찾기 -->
+      <div class="section">
+        <h2>1. id가 2인 상품 찾기</h2>
+        <button onclick="findProductById(2)">조회</button>
+        <div id="result1" class="result"></div>
+      </div>
+
+      <!-- 2. 가격이 50,000 이상인 상품 찾기 -->
+      <div class="section">
+        <h2>2. 가격이 50,000원 이상인 상품 찾기</h2>
+        <button onclick="findProductsByPrice(50000)">조회</button>
+        <div id="result2" class="result"></div>
+      </div>
+
+      <!-- 3. 상품 이름이 배열된 표기 -->
+      <div class="section">
+        <h2>3. 상품 이름 목록</h2>
+        <button onclick="displayProductNames()">조회</button>
+        <div id="result3" class="result"></div>
+      </div>
+
+      <!-- 4. 상품 목록을 localStorage에 저장하기 -->
+      <div class="section">
+        <h2>4. localStorage에 상품 목록 저장</h2>
+        <button onclick="saveToLocalStorage()">저장</button>
+        <div id="result4" class="result"></div>
+      </div>
+
+      <!-- 5. 저장된 상품 목록 불러오기 -->
+      <div class="section">
+        <h2>5. localStorage에서 상품 목록 불러오기</h2>
+        <button onclick="loadFromLocalStorage()">불러오기</button>
+        <div id="result5" class="result"></div>
+      </div>
+
+      <!-- 전체 상품 목록 -->
+      <div class="section">
+        <h2>전체 상품 목록</h2>
+        <button onclick="displayAllProducts()">전체 조회</button>
+        <div id="resultAll" class="result"></div>
+      </div>
+    </div>
+
+    <script src="products.js"></script>
+  </body>
+</html>
