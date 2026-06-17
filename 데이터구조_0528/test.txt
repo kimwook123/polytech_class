@@ -1,2 +1,18 @@
-Hello World
-Data Structure
+conda create -n pixellib python==3.8 -y
+
+conda activate pixellib
+
+pip install tensorflow==2.6.0 keras==2.6.0
+
+pip install pixellib opencv-python scikit-image
+
+pip install "protobuf<=3.20.3"
+
+이후로 deeplabv3_xception65_ade20k.h5 파일이 잘못되었을 수 있으므로
+https://github.com/ayoolaolafenwa/PixelLib/releases 여기 들어가서
+내리다 보면 
+
+Xception_pretrained_model_ade20k 있는데
+여기 Assets 눌러서
+deeplabv3_xception65_ade20k.h5 설치 후 파일을 ch9로 옮겨서 덮어쓰기
+이후, 혹시 경로 문제가 뜨면 절대경로로 바꾸기
